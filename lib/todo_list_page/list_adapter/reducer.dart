@@ -1,14 +1,14 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:reduxtoflutter/todo_list_page/todo_component/action.dart';
 import 'package:reduxtoflutter/todo_list_page/todo_component/state.dart';
 
 import '../state.dart';
-import '../todo_component/action.dart' as todo_action;
 import 'action.dart';
 
 Reducer<PageState> buildReducer() {
   return asReducer(<Object, Reducer<PageState>>{
     ToDoListAction.add: _add,
-    todo_action.ToDoAction.remove: _remove
+    ToDoAction.remove: _remove
   });
 }
 

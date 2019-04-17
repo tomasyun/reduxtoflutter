@@ -1,8 +1,8 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
+import 'package:reduxtoflutter/todo_list_page/list_adapter/action.dart';
 
 import 'action.dart';
-import 'list_adapter/action.dart' as list_action;
 import 'state.dart';
 import 'todo_component/component.dart';
 
@@ -44,7 +44,7 @@ void _onAdd(Action action, Context<PageState> ctx) {
       .then((dynamic toDo) {
     if (toDo != null &&
         (toDo.title?.isNotEmpty == true || toDo.desc?.isNotEmpty == true)) {
-      ctx.dispatch(list_action.ToDoListActionCreator.add(toDo));
+      ctx.dispatch(ToDoListActionCreator.add(toDo));
     }
   });
 }

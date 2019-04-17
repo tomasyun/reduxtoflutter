@@ -7,7 +7,7 @@ import 'reducer.dart';
 import 'state.dart';
 import 'view.dart';
 
-class ToDoListPage extends Page<PageState, Map<String, dynamic>> {
+class ToDoListPage extends Page<PageState, dynamic> {
   ToDoListPage()
       : super(
           reducer: buildReducer(),
