@@ -18,7 +18,7 @@ void _onEdit(Action action, Context<ToDoState> ctx) {
         //     builder: (BuildContext buildCtx) =>
         //         edit_page.TodoEditPage().buildPage(ctx.state)))
         .pushNamed('todo_edit', arguments: ctx.state)
-        .then((toDo) {
+        .then((dynamic toDo) {
       if (toDo != null) {
         ctx.dispatch(ToDoActionCreator.editAction(toDo));
       }
